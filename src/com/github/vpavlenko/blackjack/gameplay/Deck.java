@@ -1,7 +1,6 @@
 package com.github.vpavlenko.blackjack.gameplay;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -10,7 +9,7 @@ import java.util.Stack;
 public class Deck {
 	private Stack<Card> deck;
 	
-	static Random random = new Random(0);
+	static Random random = new Random(System.currentTimeMillis());
 	
 	Deck() {
 		this.deck = shuffleDeck(generateDeck());

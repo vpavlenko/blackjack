@@ -21,6 +21,7 @@ public class Game {
 	public void startNewDeal() {
 		deal = new Deal(this);
 		deal.start();
+		setState(GameResult.NONE);
 	}
 
 	public void hit() {
@@ -33,7 +34,10 @@ public class Game {
 
 	public void setState(GameResult state) {
 		this.state = state;
-		this.agreggatedResults.put(state, this.agreggatedResults.get(state) + 1);
+		if (state != GameResult.NONE) {
+			this.agreggatedResults.put(state,
+					this.agreggatedResults.get(state) + 1);
+		}
 	}
 
 	public GameResult getState() {

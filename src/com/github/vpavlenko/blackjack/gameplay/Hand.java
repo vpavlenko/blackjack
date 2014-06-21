@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Hand extends ArrayList<Card> {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3467935159633884836L;
+
 	public int getScore() {
 		ArrayList<Integer> possibleSums = new ArrayList<>();
 		possibleSums.add(0);

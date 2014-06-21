@@ -22,6 +22,9 @@ public class Deal {
 	}
 
 	public void hit() {
+		if (game.getState() != GameResult.NONE) {
+			return;
+		}
 		playerHand.add(deck.getNewCard());
 		if (playerHand.getScore() > 21) {
 			busted();
@@ -29,6 +32,9 @@ public class Deal {
 	}
 
 	public void stand() {
+		if (game.getState() != GameResult.NONE) {
+			return;
+		}
 		take_for_dealer();
 	}
 

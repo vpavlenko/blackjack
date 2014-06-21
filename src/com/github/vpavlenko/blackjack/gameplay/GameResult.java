@@ -1,7 +1,7 @@
 package com.github.vpavlenko.blackjack.gameplay;
 
 public enum GameResult {
-	WIN("win"), BUSTED("busted"), PUSH("push");
+	WIN("win"), BUSTED("busted"), PUSH("push"), NONE("none");
 	
 	private String name;
 
